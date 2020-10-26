@@ -30,3 +30,14 @@ len is 4
 3
 4
 =end
+
+
+#---------------- DECLARING ARRAY ----------------------
+
+array_1=[]                  # empty array                       -> array_1[]
+
+array_1=Array.new.          # empty array                       -> array_1=[]
+
+array_1= Array.new(3)       # Array.new(size)                   ->  array_1=[]
+
+array_1= Array.new(3,1)     # Array.new(size, default value)    -> array_1=[1,1,1]
