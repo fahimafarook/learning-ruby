@@ -1,0 +1,30 @@
+puts "Enter the length"
+len=gets.chomp.to_i
+puts "len is #{len}"
+
+arr=[]                  # array decalation 
+
+for i in 0...len        # putting values into array
+    arr[i]=gets.chomp
+end 
+
+for i in arr            # getting the array elements
+    puts i
+end
+
+input:
+4 
+1
+2
+3
+4
+
+
+output :
+
+Enter the length
+len is 4
+1
+2
+3
+4
