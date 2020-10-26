@@ -80,3 +80,6 @@ browsers.length                              #returns lenght                    
 
 browsers.count                               #returns lenght                     -> 5
 
+browsers.empty?                              # returns t/f if empty/false -> false
+
+browsers.include?('Konqueror')               # returns t/f if elemnt present/not -> false
