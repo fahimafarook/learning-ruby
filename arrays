@@ -34,10 +34,49 @@ len is 4
 
 #---------------- DECLARING ARRAY ----------------------
 
-array_1=[]                  # empty array                       -> array_1[]
+array_1=[]                                  # empty array                       -> array_1[]
 
-array_1=Array.new.          # empty array                       -> array_1=[]
+array_1=Array.new.                          # empty array                       -> array_1=[]
 
-array_1= Array.new(3)       # Array.new(size)                   ->  array_1=[]
+array_1= Array.new(3)                       # Array.new(size)                   ->  array_1=[]
 
-array_1= Array.new(3,1)     # Array.new(size, default value)    -> array_1=[1,1,1]
+array_1= Array.new(3,1)                     # Array.new(size, default value)    -> array_1=[1,1,1]
+
+# --2D--
+
+two_D =Array.new(3) { Array.new(3) }        # empty 2d array                    -> [[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]]
+
+#---------------- ACCESSING ARRAY ----------------------
+
+arr = [1, 2, 3, 4, 5, 6]
+
+arr.at(0)                                    # arr.at(index)                    -> 1 
+
+arr[2]                                       # arr[index]                       -> 3
+
+arr[100]                                     # arr[index]                       -> nil
+
+arr[-3]                                      # arr[index]                       -> 4
+
+arr[2, 3]                                    # arr[index]                       -> [3, 4, 5]
+
+arr[1..4]                                    # arr[index]                       -> [2, 3, 4, 5]
+
+arr[2,4]                                     # arr[start_ind, end index]        -> [3,4]
+
+arr.first                                    # returns the fst element          -> 1
+
+arr.last                                     # returns the last element         -> 6
+
+arr.take(3)                                  # returns the fst 3 elements       -> [1, 2, 3]
+
+arr.drop(3)                                  # returns elemets after the x ele  -> [4, 5, 6
+
+#---------------- details from  ARRAY ----------------------
+
+browsers = ['Chrome', 'Firefox', 'Safari', 'Opera', 'IE']
+
+browsers.length                              #returns lenght                     -> 5
+
+browsers.count                               #returns lenght                     -> 5
+
