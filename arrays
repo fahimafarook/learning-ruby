@@ -12,6 +12,7 @@ for i in arr            # getting the array elements
     puts i
 end
 
+=begin 
 input:
 4 
 1
@@ -28,3 +29,4 @@ len is 4
 2
 3
 4
+=end
