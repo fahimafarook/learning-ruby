@@ -22,3 +22,66 @@ button =driver.find_element(id: "button")
 button.click
 
 ------------------------------------------------------------------------------------------------
+TO SCROLL THE PAGE TO A PLACE OF ELEMENT
+
+
+require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for:chrome
+
+driver.navigate.to "https://formy-project.herokuapp.com/scroll"
+
+name=driver.find_element(id:"name")
+driver.action.move_to(name)
+name.send_keys("mushroom")
+
+sleep 5
+
+date= driver.find_element(id:'date')
+date.send_keys("05/10/1998");
+
+------------------------------------------------------------------------------------------------
+
+SELECTING RADIO BUTTONS 
+
+
+require "selenium-webdriver"
+
+driver= Selenium::WebDriver.for:chrome
+
+driver.navigate.to "https://formy-project.herokuapp.com/radiobutton"
+
+rb_1=driver.find_element(id:"radio-button-1")
+rb_1.click
+
+sleep 4
+
+rb_2=driver.find_element(xpath:"/html/body/div/div[2]/input")
+rb_2.click
+sleep 4
+
+rb_3=driver.find_element(xpath:"/html/body/div/div[3]/input")
+rb_3.click
+sleep 4
+
+------------------------------------------------------------------------------------------------
+
+SELECTING FROM A DROP DOWN BOX 
+
+require "selenium-webdriver"
+
+driver= Selenium::WebDriver.for:chrome
+
+driver.navigate.to "https://formy-project.herokuapp.com/dropdown"
+
+drop_down =driver.find_element(id:"dropdownMenuButton")
+sleep 4
+
+drop_down.click
+sleep 4
+
+autocomp=driver.find_element(id:"autocomplete")
+autocomp.click
+sleep 4
+
+------------------------------------------------------------------------------------------------
