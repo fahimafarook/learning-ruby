@@ -75,13 +75,49 @@ driver= Selenium::WebDriver.for:chrome
 driver.navigate.to "https://formy-project.herokuapp.com/dropdown"
 
 drop_down =driver.find_element(id:"dropdownMenuButton")
-sleep 4
+sleep 3
 
 drop_down.click
-sleep 4
+sleep 3
 
 autocomp=driver.find_element(id:"autocomplete")
 autocomp.click
-sleep 4
+sleep 3
+
+driver.navigate().back()
+sleep 3
+
+drop_down =driver.find_element(id:"dropdownMenuButton")
+sleep 3
+
+drop_down.click
+sleep 3
+
+button=driver.find_element(xpath:"/html/body/div/div/div/a[2]")
+sleep 3
+
+button.click
+sleep 3
+
+------------------------------------------------------------------------------------------------
+
+DATE PICKER
+
+
+require "selenium-webdriver"
+
+driver= Selenium::WebDriver.for:chrome
+
+driver.navigate.to "https://formy-project.herokuapp.com/datepicker"
+
+date=driver.find_element(id:"datepicker")
+
+
+date.send_keys("10/28/2020")
+
+sleep 3;
+
+date.send_keys :return
+sleep 5
 
 ------------------------------------------------------------------------------------------------
