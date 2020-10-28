@@ -1,0 +1,24 @@
+selenium webdriver automation 
+
+------------------------------------------------------------------------------------------------
+
+TO ACCESS A TEXT BOX-- FILL IT----SUBMIT
+
+require 'selenium-webdriver'
+
+driver =Selenium::WebDriver.for:chrome
+
+driver.navigate.to "https://formy-project.herokuapp.com/keypress"
+
+
+name=driver.find_element(id: "name")
+
+name.send_keys('mushroom')
+
+sleep 5
+
+button =driver.find_element(id: "button")
+
+button.click
+
+------------------------------------------------------------------------------------------------
